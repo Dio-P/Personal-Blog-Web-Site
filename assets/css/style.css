@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("cards.css");
+@import url("social.css");
+@import url("menu.css");
+@import url("post.css");
+@import url("../Images/emily-morter-8xAA0f9yQnE-unsplash.jpg");
+@import url("../Images/me-bio.jpg");
+@import url("../Images/gianandrea-villa-aZHREMlh3AE-unsplash.jpg");
+@import url("../Images/Art is a human-24.png");
+
+/*I am not certain about the feedback concerning the display size, I've got. 
+I have lowered the max-width to 320 and changed all the images to width % and height: auto. 
+Hope this was it :)*/
+@media (max-width: 599px){
+    .whole-container{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    }
+
+
+    #home-logo{
+        grid-area: header;
+        background-color: #750D06;
+        width: 130px;
+        height: 110px;
+        font-size: 25pt;
+        background-image: url("../Images/Art is a human-24.png");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: none;
+        margin-left: 45px;  
+    }
+
+
+    .menu-container{
+        display: grid;
+        grid-template-columns: 110px 110px;
+        grid-template-rows: 70px 70px;
+        grid-area: nav;
+    }
+
+
+    .menu-buttons{
+        display: flex;
+        background-color: #000;
+        border: none;
+        color: #f7f7f0;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+        width: 100px;
+        height: 60px;
+        margin: 5px;
+        font-family: 'Lobster', cursive;
+        font-size: 16pt;
+        text-decoration: underline;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+
+    .menu-buttons:active {
+        box-shadow: none;
+    }
+
+
+    #about-us{
+        grid-area: 2/2/2/3;
+    }
+
+
+    #design-system{
+        grid-area: 2/1/2/2;
+    }
+
+
+    #latest-post{
+        grid-area:1/1/1/2;
+    }
+
+
+    #button-subscribe{
+        grid-area: 1/2/1/3;
+    }
+
+
+    .home-head{
+        color: #edd609;
+    }
+
+
+    .img{
+        width: 100%;
+        height: auto;
+    }
+
+
+    a{
+        color: inherit;
+    }
+
+
+    footer{
+        grid-area: footer;
+        background-color: black;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+    .foot-logo{
+        width: 100px;
+        align-self: center;
+        padding: 10px;
+        grid-area: 1/1/1/2;
+    }
+
+
+    .head{
+        background-color: none;
+    }
+    
+
+    .foot{
+        background-color: black;
+    }
+
+
+}
+
+
+@media (min-width: 600px) and (max-width:900px) {
+
+
+    .whole-container{
+        display: grid;
+        grid-template-areas:
+        "header ."
+        "nav nav"
+        "main main"
+        "footer footer";
+        grid-auto-rows: auto;
+        grid-auto-columns: auto;
+    }
+
+
+    #home-logo{
+        grid-area: header;
+        background-color: #750D06;
+        width: 130px;
+        height: 110px;
+        font-size: 25pt;
+        background-image: url("../Images/Art is a human-24.png");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 0; 
+    }
+
+
+    .menu-container{
+        display: grid;
+        grid-template-columns: 110px 110px 110px 110px;
+        grid-template-rows: 70px;
+        grid-area: nav;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "top ds top"
+        "lp hl aus"
+        "bt sb bt ";
+    }
+
+
+    .menu-buttons{
+        display: flex;
+        background-color: #000;
+        border: none;
+        color: #f7f7f0;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+        width: 100px;
+        height: 60px;
+        margin: 5px;
+        font-family: 'Lobster', cursive;
+        font-size: 16pt;
+        text-decoration: underline;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+
+    .menu-buttons:active {
+        box-shadow: none;
+    }
+
+
+    #about-us{
+        grid-area: 1/3/1/4;
+    }
+
+
+    #design-system{
+        grid-area: 1/2/1/3;
+    }
+
+
+    #latest-post{
+        grid-area:1/1/1/2;
+    }
+
+
+    #button-subscribe{
+        grid-area: 1/4/1/5;
+    }
+
+
+    .home-head{
+        color: #edd609;
+    }
+
+
+    .img{
+        width: 100%;
+        height: auto;
+    }
+
+
+    a{
+        color: inherit;
+    }
+
+
+    footer{
+        grid-area: footer;
+        background-color: black;
+        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .foot-logo{
+        width: 100px;
+        align-self: center;
+        padding: 10px;
+        grid-area: 1/1/1/2;
+    }
+
+
+    .head{
+        background-color: none;
+    }
+
+
+    .foot{
+        background-color: black;
+    }
+
+
+}
+
+
+@media (min-width:901px) {
+
+
+    .whole-container{
+        display: grid;
+        grid-template-areas:
+        "header ."
+        "nav nav"
+        "main main"
+        "footer footer";
+        grid-auto-rows: auto;
+        grid-auto-columns: auto;
+    }
+
+
+    #home-logo{
+        grid-area: header;
+        background-color: #750D06;
+        width: 130px;
+        height: 110px;
+        font-size: 25pt;
+        background-image: url("../Images/Art is a human-24.png");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: none;
+        margin-left: 0;     
+    }
+
+
+    .menu-container{
+        display: grid;
+        grid-template-columns: 150px 150px 150px 150px;
+        grid-template-rows: 70px;
+        grid-area: nav;
+        grid-template-areas: 
+        "top ds top"
+        "lp hl aus"
+        "bt sb bt ";
+    }
+
+
+    .menu-buttons{
+        display: flex;
+        background-color: #000;
+        border: none;
+        color: #f7f7f0;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+        width: 100px;
+        height: 60px;
+        margin: 5px;
+        font-family: 'Lobster', cursive;
+        font-size: 16pt;
+        text-decoration: underline;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+
+    .menu-buttons:active {
+        box-shadow: none;
+    }
+
+
+    #about-us{
+        grid-area: 1/3/1/4;
+    }
+
+
+    #design-system{
+        grid-area: 1/2/1/3;
+    }
+
+
+    #latest-post{
+        grid-area:1/1/1/2;
+    }
+
+
+    #button-subscribe{
+        grid-area: 1/4/1/5;
+    }
+
+
+    .home-head{
+        color: #edd609;
+    }
+
+
+    .img{
+        width: 100%;
+        height: auto;
+    }
+
+
+    a{
+        color: inherit;
+    }
+
+
+    footer{
+        grid-area: footer;
+        background-color: black;
+        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .foot-logo{
+        width: 100px;
+        align-self: center;
+        padding: 10px;
+        grid-area: 1/1/1/2;
+    }
+
+
+    .head{
+        background-color: none;
+    }
+
+
+    .foot{
+        background-color: black;
+    }
+
+
+}
