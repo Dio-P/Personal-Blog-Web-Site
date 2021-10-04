@@ -2,7 +2,7 @@
 
 ## Description
 
-A personal blog website, including custom images, layout, and styling
+- A personal blog website, including custom images, layout, and styling
 
 
 
